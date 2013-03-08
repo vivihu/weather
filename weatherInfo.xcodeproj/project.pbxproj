@@ -18,6 +18,11 @@
 		91A81D9B16E96884001645FC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 91A81D9A16E96884001645FC /* Default-568h@2x.png */; };
 		91A81D9E16E96884001645FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A81D9D16E96884001645FC /* ViewController.m */; };
 		91A81DA116E96884001645FC /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A81D9F16E96884001645FC /* ViewController.xib */; };
+		91A81DAA16E97C20001645FC /* cloudy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 91A81DA816E97C20001645FC /* cloudy.gif */; };
+		91A81DB316E97D7B001645FC /* sunny.gif in Resources */ = {isa = PBXBuildFile; fileRef = 91A81DB216E97D7B001645FC /* sunny.gif */; };
+		91A81DB716E98007001645FC /* weather.png in Resources */ = {isa = PBXBuildFile; fileRef = 91A81DB616E98007001645FC /* weather.png */; };
+		91A81DB916E988E3001645FC /* rain.gif in Resources */ = {isa = PBXBuildFile; fileRef = 91A81DB816E988E3001645FC /* rain.gif */; };
+		91A81DBB16E98D8D001645FC /* overcast.gif in Resources */ = {isa = PBXBuildFile; fileRef = 91A81DBA16E98D8D001645FC /* overcast.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,11 @@
 		91A81D9C16E96884001645FC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		91A81D9D16E96884001645FC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		91A81DA016E96884001645FC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		91A81DA816E97C20001645FC /* cloudy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cloudy.gif; sourceTree = "<group>"; };
+		91A81DB216E97D7B001645FC /* sunny.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sunny.gif; sourceTree = "<group>"; };
+		91A81DB616E98007001645FC /* weather.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weather.png; sourceTree = "<group>"; };
+		91A81DB816E988E3001645FC /* rain.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = rain.gif; sourceTree = "<group>"; };
+		91A81DBA16E98D8D001645FC /* overcast.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = overcast.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 		91A81D7816E96884001645FC = {
 			isa = PBXGroup;
 			children = (
+				91A81DA716E97C12001645FC /* image */,
 				91A81D8A16E96884001645FC /* weatherInfo */,
 				91A81D8316E96884001645FC /* Frameworks */,
 				91A81D8216E96884001645FC /* Products */,
@@ -85,8 +96,8 @@
 			children = (
 				91A81D9316E96884001645FC /* AppDelegate.h */,
 				91A81D9416E96884001645FC /* AppDelegate.m */,
-				91A81D9C16E96884001645FC /* ViewController.h */,
 				91A81D9D16E96884001645FC /* ViewController.m */,
+				91A81D9C16E96884001645FC /* ViewController.h */,
 				91A81D9F16E96884001645FC /* ViewController.xib */,
 				91A81D8B16E96884001645FC /* Supporting Files */,
 			);
@@ -105,6 +116,18 @@
 				91A81D9A16E96884001645FC /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		91A81DA716E97C12001645FC /* image */ = {
+			isa = PBXGroup;
+			children = (
+				91A81DA816E97C20001645FC /* cloudy.gif */,
+				91A81DB216E97D7B001645FC /* sunny.gif */,
+				91A81DB816E988E3001645FC /* rain.gif */,
+				91A81DBA16E98D8D001645FC /* overcast.gif */,
+				91A81DB616E98007001645FC /* weather.png */,
+			);
+			name = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +186,11 @@
 				91A81D9916E96884001645FC /* Default@2x.png in Resources */,
 				91A81D9B16E96884001645FC /* Default-568h@2x.png in Resources */,
 				91A81DA116E96884001645FC /* ViewController.xib in Resources */,
+				91A81DAA16E97C20001645FC /* cloudy.gif in Resources */,
+				91A81DB316E97D7B001645FC /* sunny.gif in Resources */,
+				91A81DB716E98007001645FC /* weather.png in Resources */,
+				91A81DB916E988E3001645FC /* rain.gif in Resources */,
+				91A81DBB16E98D8D001645FC /* overcast.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

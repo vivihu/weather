@@ -10,4 +10,12 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIImageView *img1;
+@property (strong, nonatomic) IBOutlet UIImageView *img2;
+@property (strong, nonatomic) IBOutlet UILabel *weather;
+
+@property (strong, nonatomic) IBOutlet UILabel *temp1;
+@property (strong, nonatomic) IBOutlet UILabel *fl1;
+@property (strong, nonatomic) IBOutlet UILabel *UV;
+@property (strong, nonatomic) IBOutlet UILabel *index_d;
 @end
