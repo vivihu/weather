@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
+#import <RestKit/RestKit.h>
 #import "ViewController.h"
+#import "detail.h"
 
 @implementation AppDelegate
 
@@ -17,6 +18,46 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+    
+    [RKMIMETypeSerialization registerClass:[detail class] forMIMEType:@"text/html"];
+    
+    RKObjectMapping *mapping = [[RKObjectMapping alloc]initWithClass:[detail class]];
+    [mapping addAttributeMappingsFromDictionary:@{
+     @"temp1":@"temp1",
+     @"wind1":@"wind1",
+     @"index_uv":@"index_uv",
+     @"index_d":@"index_d",
+     @"weather1":@"weather1",
+     
+     @"temp2":@"temp2",
+     @"wind2":@"wind2",
+     @"weather2":@"weather2",
+     
+     @"temp3":@"temp3",
+     @"wind3":@"wind3",
+     @"weather3":@"weather3",
+     
+     @"temp4":@"temp4",
+     @"wind4":@"wind4",
+     @"weather4":@"weather4",
+     
+     @"temp5":@"temp5",
+     @"wind5":@"wind5",
+     @"weather5":@"weather5",
+     
+     @"temp6":@"temp6",
+     @"wind6":@"wind6",
+     @"weather6":@"weather6",
+     }];
+    RKResponseDescriptor *response = [RKResponseDescriptor responseDescriptorWithMapping:mapping
+                                                                             pathPattern:nil
+                                                                                 keyPath:@"weatherinfo"
+                                                                             statusCodes:[NSIndexSet indexSetWithIndex:200]];
+    AFHTTPClient *client = [[AFHTTPClient alloc]initWithBaseURL:[NSURL URLWithString:@"http://m.weather.com.cn"]];
+//    [client setDefaultHeader:@"Accept" value:@"text/html"];
+    RKObjectManager *objectManager = [[RKObjectManager alloc]initWithHTTPClient:client];
+    [objectManager addResponseDescriptor:response]; 
     
     
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
@@ -51,5 +92,20 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+/********************页面旋转*************************/
+-(NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskLandscape;
+    //     UIInterfaceOrientationMaskAll
+    //     UIInterfaceOrientationMaskAllButUpsideDown
+}
+-(BOOL)shouldAutorotate{
+    return YES;
+}
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation{
+    return YES;
+}
+/********************页面旋转*************************/
+
 
 @end
