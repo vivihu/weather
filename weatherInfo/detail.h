@@ -8,7 +8,8 @@
 
 #import "RKNSJSONSerialization.h"
 
-@interface detail : RKNSJSONSerialization
+@interface detail : RKNSJSONSerialization<NSCoding>
+
 
 @property (nonatomic,strong) NSString *temp1;
 @property (nonatomic,strong) NSString *wind1;
@@ -45,6 +46,8 @@
 //@property (nonatomic,strong) NSString *index_uv;
 //@property (nonatomic,strong) NSString *index_d;
 @property (nonatomic,strong) NSString *weather6;
+- (void)encodeWithCoder:(NSCoder *)aCoder;
+- (id)initWithCoder:(NSCoder *)aDecoder;
 
 
 @end

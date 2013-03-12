@@ -39,7 +39,7 @@
                                 weatherInfo = [mappingResult dictionary];
                                 
                                 NSLog(@"00000000%@000000000",data);
-                                [[EGOCache globalCache]setObject:weather forKey:@"cacheData"];
+                                [[EGOCache globalCache]setObject:weatherInfo forKey:@"cacheData"];
                                 data = [weatherInfo objectForKey:@"weatherinfo"];
 
                                 temp1.text = [data temp1];
@@ -56,7 +56,15 @@
                             }
                             failure:^(RKObjectRequestOperation *operation,NSError *error){
                                 
+
+                                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"出错了"
+                                                                               message:[error localizedDescription]
+                                                                              delegate:self
+                                                                     cancelButtonTitle:@"OK"
+                                                                     otherButtonTitles:nil];
+                                [alert show];
                                 weatherInfo = (NSDictionary *)[[EGOCache globalCache] objectForKey:@"cacheData"];
+                                NSLog(@"000000%@00000",weatherInfo);
                                 data = [weatherInfo objectForKey:@"weatherinfo"];
                                 temp1.text = [data temp1];
                                 fl1.text = [data wind1];
@@ -69,12 +77,6 @@
                                 date.text = [dateFormatter stringFromDate:[NSDate date]];
                                 [self weatherImg];
 
-                                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"出错了"
-                                                                               message:[error localizedDescription]
-                                                                              delegate:self
-                                                                     cancelButtonTitle:@"OK"
-                                                                     otherButtonTitles:nil];
-                                [alert show];
                             }
      ];
 }
